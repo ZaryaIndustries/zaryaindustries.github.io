@@ -1,1 +1,275 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="Zarya Industries is an India-based business developing its direction in fragrance, soaps and detergents, and chemicals.">
+  <title>ZARYA INDUSTRIES — A New Perspective on Fragrance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ivory: #f3f0e9;
+      --black: #111111;
+      --stone: #b9b1a5;
+      --muted: #706d67;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--ivory);
+      color: var(--black);
+      font-family: 'Inter', sans-serif;
+    }
+    a { color: inherit; text-decoration: none; }
+    .topbar {
+      min-height: 86px;
+      padding: 22px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #d8d2c8;
+    }
+    .brand { display: inline-flex; flex-direction: column; gap: 3px; }
+    .brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 34px;
+      font-weight: 600;
+      letter-spacing: 5px;
+    }
+    .brand-sub {
+      font-size: 9px;
+      letter-spacing: 5px;
+      text-align: center;
+    }
+    nav { display: flex; gap: 26px; font-size: 11px; letter-spacing: 1.5px; }
+    .hero {
+      min-height: 680px;
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      background: var(--black);
+      color: var(--ivory);
+    }
+    .hero-copy {
+      padding: 105px 8% 90px 14%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .eyebrow { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; }
+    h1 {
+      margin: 28px 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(56px, 7vw, 94px);
+      font-weight: 400;
+      line-height: .96;
+      letter-spacing: -2px;
+    }
+    .hero-copy p {
+      max-width: 360px;
+      color: #c8c2b8;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+    .link {
+      display: inline-block;
+      margin-top: 28px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--stone);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .hero-art {
+      position: relative;
+      min-height: 500px;
+      overflow: hidden;
+      background:
+        linear-gradient(120deg, transparent 30%, rgba(255,255,255,.07) 30.2%, transparent 30.8%),
+        linear-gradient(35deg, #282725, #68645c 47%, #1b1b19 48%, #393731);
+    }
+    .hero-art:before {
+      content: "";
+      position: absolute;
+      width: 48%;
+      height: 74%;
+      left: 26%;
+      top: 13%;
+      border: 1px solid rgba(243,240,233,.5);
+      transform: skewY(-8deg);
+    }
+    .hero-art:after {
+      content: "Z";
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: rgba(243,240,233,.82);
+      font: 200px 'Cormorant Garamond', serif;
+    }
+    .section { padding: 100px 9%; }
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    h2 {
+      font: 400 clamp(38px, 5vw, 60px)/1.08 'Cormorant Garamond', serif;
+      margin: 22px 0;
+    }
+    .intro { max-width: 690px; }
+    .intro p, .business p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.9;
+    }
+    .business-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 1px;
+      background: #d7d1c7;
+      margin-top: 45px;
+      border: 1px solid #d7d1c7;
+    }
+    .business {
+      background: var(--ivory);
+      padding: 34px 27px;
+      min-height: 250px;
+    }
+    .business .number {
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: var(--muted);
+    }
+    .business h3 {
+      font: 400 31px 'Cormorant Garamond', serif;
+      margin: 40px 0 15px;
+    }
+    .business p { font-size: 12px; }
+    .contact {
+      background: #e5e0d7;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+    .contact p { font-size: 13px; line-height: 1.9; color: var(--muted); }
+    .contact-note {
+      border-left: 1px solid #b9b1a5;
+      padding-left: 30px;
+      font-size: 12px;
+      line-height: 1.9;
+      color: var(--muted);
+    }
+    footer {
+      background: var(--black);
+      color: var(--ivory);
+      padding: 30px 7%;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 10px;
+      letter-spacing: 1px;
+    }
+    @media(max-width:700px) {
+      .topbar { padding: 18px 6%; }
+      .brand-name { font-size: 28px; }
+      nav { gap: 12px; font-size: 9px; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-copy { padding: 85px 9%; }
+      .hero-art { min-height: 320px; }
+      .hero-art:after { font-size: 150px; }
+      .section { padding: 75px 8%; }
+      .business-grid { grid-template-columns: 1fr; }
+      .business { min-height: 0; }
+      .business h3 { margin-top: 25px; }
+      .contact { grid-template-columns: 1fr; gap: 15px; }
+      .contact-note { padding-left: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Zarya Industries home">
+      <span class="brand-name">ZARYA</span>
+      <span class="brand-sub">INDUSTRIES</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#vision">VISION</a>
+      <a href="#business">OUR FOCUS</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Zarya Industries · India</span>
+        <h1>A new<br>perspective<br>on fragrance.</h1>
+        <p>Building a considered approach to fragrance and everyday essentials, guided by thoughtful design and a long-term vision.</p>
+        <a class="link" href="#vision">Discover our vision &nbsp; ↘</a>
+      </div>
+      <div class="hero-art" role="img" aria-label="Abstract architectural composition representing the Zarya brand"></div>
+    </section>
+
+    <section class="section intro" id="vision">
+      <span class="section-label">01 — Our vision</span>
+      <h2>Made with intention.<br>Built for what comes next.</h2>
+      <p>Zarya Industries is an India-based business developing its direction across fragrance and selected manufacturing sectors. We believe strong brands begin with clarity of purpose, attention to detail and a commitment to doing things thoughtfully.</p>
+    </section>
+
+    <section class="section" id="business">
+      <span class="section-label">02 — Areas of focus</span>
+      <h2>Three areas.<br>A considered approach.</h2>
+      <div class="business-grid">
+        <article class="business">
+          <span class="number">01 / IN DEVELOPMENT</span>
+          <h3>Fragrance</h3>
+          <p>Exploring a distinctive fragrance direction shaped by character, composition and contemporary design.</p>
+        </article>
+        <article class="business">
+          <span class="number">02 / BUSINESS FOCUS</span>
+          <h3>Soaps &amp; Detergents</h3>
+          <p>Developing our approach to everyday cleaning and personal-care product categories.</p>
+        </article>
+        <article class="business">
+          <span class="number">03 / BUSINESS FOCUS</span>
+          <h3>Chemicals</h3>
+          <p>Exploring opportunities within the broader chemicals sector as our business direction develops.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div>
+        <span class="section-label">03 — Get in touch</span>
+        <h2>Let's start a conversation.</h2>
+        <p>For business enquiries and future collaborations, our official contact channel is being prepared.</p>
+      </div>
+      <div class="contact-note">
+        ZARYA INDUSTRIES<br>
+        India<br><br>
+        Business enquiries<br>
+        Contact details to be announced.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>ZARYA INDUSTRIES</span>
+    <span>AN INDEPENDENT BUSINESS IN DEVELOPMENT</span>
+    <span>© <span id="year"></span> ZARYA</span>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
